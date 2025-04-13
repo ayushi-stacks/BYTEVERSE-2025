@@ -1,19 +1,22 @@
 import Image from "next/image";
 
 import { TestForm } from "@/components/forms/TestForm";
+import Link from "next/link";
 
 const MedicalTests = async ({ params: { userId } }: SearchParamProps) => {
   return (
     <div className="flex h-screen max-h-screen">
       <section className="remove-scrollbar container">
         <div className="sub-container max-w-[860px] flex-1 justify-between">
-          <Image
-            src="/assets/icons/logo-full.svg"
-            height={1000}
-            width={1000}
-            alt="logo"
-            className="mb-12 h-10 w-fit"
-          />
+          <Link href="/">
+            <Image
+              src="/assets/icons/logo-full.svg"
+              height={1000}
+              width={1000}
+              alt="patient"
+              className="mb-12 h-10 w-fit"
+            />
+          </Link>
 
           <TestForm userId={userId} />
 

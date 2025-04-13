@@ -19,13 +19,15 @@ const Ambulance = async ({ params: { userId } }: SearchParamProps) => {
       >
         <div className="sub-container">
           <div className="flex justify-between">
-            <Image
-              src="/assets/icons/logo-full.svg"
-              height={1000}
-              width={1000}
-              alt="patient"
-              className="mb-12 w-fit"
-            />
+            <Link href="/">
+              <Image
+                src="/assets/icons/logo-full.svg"
+                height={1000}
+                width={1000}
+                alt="patient"
+                className="mb-12 h-10 w-fit"
+              />
+            </Link>
             <p>
               Welcome{" "}
               <span className="p-1 m-1 text-[#24AE7C]">{user?.name}</span>
